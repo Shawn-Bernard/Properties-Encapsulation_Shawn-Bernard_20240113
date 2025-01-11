@@ -1,0 +1,7 @@
+C:\Users\Shawn Bernard\Desktop\Coding\Properties&Encapsulation_Shawn-Bernard_20240113\Properties&Encapsulation_Shawn-Bernard_20240113\obj\Debug\Properties&Encapsulation_Shawn-Bernard_20240113.csproj.AssemblyReference.cache
+C:\Users\Shawn Bernard\Desktop\Coding\Properties&Encapsulation_Shawn-Bernard_20240113\Properties&Encapsulation_Shawn-Bernard_20240113\obj\Debug\Properties&Encapsulation_Shawn-Bernard_20240113.csproj.CoreCompileInputs.cache
+C:\Users\Shawn Bernard\Desktop\Coding\Properties&Encapsulation_Shawn-Bernard_20240113\Properties&Encapsulation_Shawn-Bernard_20240113\bin\Debug\Properties&Encapsulation_Shawn-Bernard_20240113.exe.config
+C:\Users\Shawn Bernard\Desktop\Coding\Properties&Encapsulation_Shawn-Bernard_20240113\Properties&Encapsulation_Shawn-Bernard_20240113\bin\Debug\Properties&Encapsulation_Shawn-Bernard_20240113.exe
+C:\Users\Shawn Bernard\Desktop\Coding\Properties&Encapsulation_Shawn-Bernard_20240113\Properties&Encapsulation_Shawn-Bernard_20240113\bin\Debug\Properties&Encapsulation_Shawn-Bernard_20240113.pdb
+C:\Users\Shawn Bernard\Desktop\Coding\Properties&Encapsulation_Shawn-Bernard_20240113\Properties&Encapsulation_Shawn-Bernard_20240113\obj\Debug\Properties&Encapsulation_Shawn-Bernard_20240113.exe
+C:\Users\Shawn Bernard\Desktop\Coding\Properties&Encapsulation_Shawn-Bernard_20240113\Properties&Encapsulation_Shawn-Bernard_20240113\obj\Debug\Properties&Encapsulation_Shawn-Bernard_20240113.pdb
