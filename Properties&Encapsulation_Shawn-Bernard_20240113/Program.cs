@@ -13,7 +13,7 @@ namespace Properties_Encapsulation_Shawn_Bernard_20240113
             // Create instances of each class
             GameCharacter hero = new GameCharacter("Elphaba");//Setting my name
             Inventory backpack = new Inventory(25); //Setting my capcity
-            PowerUp buff = new PowerUp("defying gravity", 0.0f);
+            PowerUp buff = new PowerUp("defying gravity", 10.0f);//Setting my buff name & duration 
 
             //Hero Test
             hero.Health = 100;  // Should work
@@ -21,18 +21,16 @@ namespace Properties_Encapsulation_Shawn_Bernard_20240113
             Console.WriteLine($"[Name: {hero.Name}]  [Health: {hero.Health}]  [Am I alive: {hero.IsAlive}]");
 
             //Backpack test
-            backpack.Gold = 2;
-            //backpack.Capacity = 15;
-            backpack.ItemCount = 20;
-            Console.WriteLine($"[Gold count: {backpack.Gold}]");
-            Console.WriteLine($"[Capcity: {backpack.Capacity}]");
+            backpack.Gold = 5;
+            backpack.Capacity = 30;
+            backpack.ItemCount = 25;
             Console.WriteLine($"[Gold count: {backpack.Gold}]  [Capcity: {backpack.Capacity}]  [Item count: {backpack.ItemCount}]  [Is backpack full: {backpack.IsFull}]");
 
             //Buff test
+            buff.Duration = -20;
             Console.WriteLine($"[Buff name: {buff.Name}]  [Duration: {buff.Duration}]  [Is buff active {buff.IsActive}]");
             Console.ReadLine();
 
-            // Add more tests for other properties...
         }
     }
     public class GameCharacter
@@ -53,19 +51,20 @@ namespace Properties_Encapsulation_Shawn_Bernard_20240113
             get { return health; }
             set
             {
+                //So the value doesn't go under 0
                 if (value < 0) value = 0;
+                //So my value doesn't go over 100
                 if (value > 100) value = 100;
                 health = value;
-                // TODO: Validate between 0-100
             }
         }
 
-        // 3. Computed property
         public bool IsAlive
         {
             get
             {
-                if (health >= 0)
+                //if my health is greater than 0 returns true
+                if (health > 0)
                 {
                     return true;
                 }
@@ -85,13 +84,14 @@ namespace Properties_Encapsulation_Shawn_Bernard_20240113
 
         public Inventory(int capacity)
         {
-            this.capacity = capacity;
+            Capacity = capacity;
         }
         public int Gold
         {
             get { return gold; }
             set
             {
+                //So the value doesn't go under 0
                 if (value < 0) value = 0;
                 gold = value;
             }
@@ -102,7 +102,6 @@ namespace Properties_Encapsulation_Shawn_Bernard_20240113
             set
             {
                 if (value < 0) value = 0;
-                if (value > 20) value = 20;
                 capacity = value;
             }
             // TODO: Implement properties as specified
@@ -112,7 +111,9 @@ namespace Properties_Encapsulation_Shawn_Bernard_20240113
             get { return itemCount; }
             set
             {
+                //So the value doesn't go under 0
                 if (value < 0) value = 0;
+                //If my value is greater than the capcity, make my value into the capcity
                 if (value > capacity) value = capacity;
                 itemCount = value;
             }
@@ -122,7 +123,8 @@ namespace Properties_Encapsulation_Shawn_Bernard_20240113
         {
             get
             {
-                if (itemCount >= capacity)
+                //If my item count is equal to my capcity return true
+                if (itemCount == capacity)
                 {
                     return true;
                 }
@@ -139,23 +141,24 @@ namespace Properties_Encapsulation_Shawn_Bernard_20240113
         public PowerUp(string name, float duration)
         {
             Name = name;
-            this.duration = duration;
+            Duration = duration;
         }
         public float Duration
         {
             //short hand for get { return duration; }
-            get => duration;
+            get => duration; 
             set
             {
-                if (value <= 0) value = 0;
+                //So my value doesn't go under 0
+                if (value < 0) value = 0;
                 duration = value;
-                //if (value >= 0) isActive = true; 
             }
         }
         public bool IsActive
         {
             get {
-                if (duration < 0)
+                //If my duration is greater then 0, returns true
+                if (duration > 0)
                 {
                     return true;
                 }
